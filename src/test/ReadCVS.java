@@ -73,8 +73,7 @@ public class ReadCVS extends JPanel {
 				for(int i=0;i<noOfCompanies;i++){
 					CompanyDetail companyDetail=companyDetails.get(i);
 					Double maxSharePrice=0.0;
-					String maxYear=""; // if more than one instances of max share prices. It takes latest value of year
-					String maxmonth="";// if more than one instances of max share prices. It takes latest value of year
+				
 					for (int j = 0; j < companyDetail.getSharePrices().size(); j++) {
 						if(companyDetail.getSharePrices().get(j).getPrice()>maxSharePrice)
 							maxSharePrice=companyDetail.getSharePrices().get(j).getPrice();
@@ -88,7 +87,9 @@ public class ReadCVS extends JPanel {
 						if(companyDetail.getSharePrices().get(j).getPrice()==companyDetail.maxSharePrice)
 						{
 							System.out.println("Year:"+companyDetail.getSharePrices().get(j).getYear()+" Month:"+companyDetail.getSharePrices().get(j).getMonth());
+							// if more than one instances of max share prices. It takes latest value of month
 							companyDetail.maxSharePriceMonth=companyDetail.getSharePrices().get(j).getMonth();
+							// if more than one instances of max share prices. It takes latest value of year
 							companyDetail.maxSharePriceYear=companyDetail.getSharePrices().get(j).getYear();
 						}	
 					}
