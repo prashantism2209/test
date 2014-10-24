@@ -1,5 +1,7 @@
-test:Reading Company Share Prices from CSV File and listing maximum share price's (year, month)
+test:
 ====
+Reading Company Share Prices from CSV File and listing maximum share price's (year, month)
+
 For Code Running
 Run ReadCVS.java -> Select csv file containing data-> click on open
 
